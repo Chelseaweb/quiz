@@ -22,13 +22,33 @@ body{
 h1{
     text-align: center;
     color:black;
-    font-style: normal;
+    font-style: italic;
 }
 
 h2{
     font-style: oblique;
     color: black;
+    text-align: center;
 }
+
+div {
+    border:black 2px solid ;
+      width:650px;
+      height:auto;
+      color:black;
+      text-align: center;
+      margin-top:30px;
+      margin-left:auto;
+      margin-right:auto;
+     background-color: cornsilk;
+    animation-name: example;
+    animation-duration:6s;
+  }
+  
+  @keyframes example {
+    from {background-color: brown ;}
+    to {background-color: burlywood;}
+  }
 
 
    

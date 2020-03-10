@@ -14,7 +14,10 @@
         <div class="row">
           <div class="col-12">
             <div class="soccer">
+            <header>
                 <h1>Let The Games Begin</h1>
+</header>
+
 <?php
 
 $Question = array(
@@ -35,7 +38,7 @@ $Question = array(
      'A'=>"Ajax",
      'B'=>"Juventus",
      'C'=>"Everton",
-     'C'=>"Manchester United",
+     'D'=>"Manchester United"
      ),
      'CorrectAnswer'=> 'B'
     ),
@@ -152,7 +155,7 @@ $Question = array(
     'A'=>"Manchester United",
     'B'=>"Chelsea",
     'C'=>"Crystal Palace",
-    'C'=>"Watford",
+    'D'=>"Watford",
     ),
     'CorrectAnswer'=> 'A'
 ),
@@ -233,29 +236,31 @@ $Question = array(
 
 );
 
-if (isset($_POST['answers'])){
-    $Answers = $_POST['answers']; // Get submitted answers.
+//if (isset($_POST['answers'])){
+  //  $Answers = $_POST['answers']; // Get submitted answers.
 
     // Now this is fun, automated question checking! ;)
 
-    foreach ($Question as $QuestionNo => $Value){
+   // foreach ($Question as $QuestionNo => $Value){
         // Echo the question
-        echo $Value['Question'].'<br />';
-
+       // echo $Value['Question'].'<br />';
         
-        if ($Answers[$QuestionNo] != $Value['CorrectAnswer']){
-             echo 'You answered: <span style="color: red;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span><br>'; // Replace style with a class
-             echo 'Correct answer: <span style="color: green;">'.$Value['Answers'][$Value['CorrectAnswer']].'</span>';
-        } else {
-            echo 'Correct answer: <span style="color: green;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span><br>'; // Replace style with a class
-            echo 'You are correct: <span style="color: green;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span>'; $counter++;
+        
+        //if ($Answers[$QuestionNo] != $Value['CorrectAnswer']){
+         //    echo 'You answered: <span style="color: red;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span><br>'; // Replace style with a class
+         //  echo 'Correct answer: <span style="color: green;">'.$Value['Answers'][$Value['CorrectAnswer']].'</span>';
+       // } else {
+        //    echo 'Correct answer: <span style="color: green;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span><br>'; // Replace style with a class
+           // echo 'You are correct: <span style="color: green;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span>'; $counter++;
 
-        }
+      //  }
+        
         
     
         
-
+      
         echo '<br /><hr>'; 
+        
                                 if ($counter=="") 
                                 { 
                                 $counter='0';
@@ -265,17 +270,15 @@ if (isset($_POST['answers'])){
                                 { 
                                 $results = "Your score: $counter/20"; 
                                 }
-                    }
-                                 echo $results;
+                             echo $results;
 
-                                 if ($answers <= '10')
+                                 if ($answers<='10')
                                  {  
                                       $results="Perhaps you should do your history!";
                                  }
-                                  
+                                 echo $results;
+                                                                
                                  
-                                         
-} else {  
 ?>
     <form action="quiz.php" method="post" id="quiz">
     <?php foreach ($Question as $QuestionNo => $Value) { ?>
@@ -295,7 +298,7 @@ if (isset($_POST['answers'])){
     <input type="submit" value="Submit Quiz" />
     </form>
 <?php 
-}
+
 ?>
 </body>
 </html>
