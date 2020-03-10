@@ -15,12 +15,12 @@
     animation-name: example;
     animation-duration:6s;
   }
-  
   @keyframes example {
     from {background-color: brown ;}
     to {background-color: burlywood;}
   }
   </style>
+  
 <title>Quiz</title>
  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial scaleb=1.0">

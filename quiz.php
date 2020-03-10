@@ -108,7 +108,7 @@ $Question = array(
 ),
 
     9=> array(
-   'Question'=>'Which country has its national  team called Samba boys',
+   'Question'=>'Which country has its national  team called Samba boys?',
    'Answers'=>array(
      'A'=> "Australia",
      'B'=> "America",
@@ -119,7 +119,7 @@ $Question = array(
 ),
     
     10=> array(
-   'Question'=>'Which english team has been banned by UEFA?',
+   'Question'=>'Which english team has been banned from UEFA for two years?',
       'Answers' => array(
      'A'=> "Manchester City",
      'B'=> "Bournemouth",
@@ -251,16 +251,12 @@ $Question = array(
          //  echo 'Correct answer: <span style="color: green;">'.$Value['Answers'][$Value['CorrectAnswer']].'</span>';
        // } else {
         //    echo 'Correct answer: <span style="color: green;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span><br>'; // Replace style with a class
-           // echo 'You are correct: <span style="color: green;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span>'; $counter++;
+           // echo 'You are correct: <span style="color: green;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span>';   $counter++;               
 
       //  }
-        
-        
-    
-        
-      
+          
         echo '<br /><hr>'; 
-        
+      
                                 if ($counter=="") 
                                 { 
                                 $counter='0';
@@ -272,9 +268,14 @@ $Question = array(
                                 }
                              echo $results;
 
-                                 if ($answers<='10')
+                                 if ($answers<='10' || $answers >'10')
                                  {  
                                       $results="Perhaps you should do your history!";
+                                 }
+
+                                 else
+                                 {
+                                    $result="You deserve the golden boot!";
                                  }
                                  echo $results;
                                                                 
