@@ -251,6 +251,7 @@ if (isset($_POST['answers'])){
             echo 'You are correct: <span style="color: green;">'.$Value['Answers'][$Answers[$QuestionNo]].'</span>'; $counter++;
 
         }
+        
     
         
 
