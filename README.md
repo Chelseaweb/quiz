@@ -5,6 +5,12 @@ Project Structure:
 my-app
 images folder
 style.css in css folder
+finalscore.php
+index.php
+landingpage.php
+questions.php
+quiz.php
+quizReport.php
 
 
  
